@@ -1,12 +1,12 @@
 #provider
-az_subscription_id = "fecb4c6d-7a6b-4ba4-b321-4cbfce95f967"
-az_tenant_id       = "f79bb0dc-9587-4af1-af54-f79861fcda92"
-az_client_id       = "b678f8fa-228b-4236-bb3a-e88ba26cf81b"
-az_client_secret   = "a0dpcfPG1dPqRgEmQQRbzS0zs-U6lh.m95"
+az_subscription_id = "************************************"
+az_tenant_id       = "************************************"
+az_client_id       = "************************************"
+az_client_secret   = "************************************"
 
 
 #create_vm_resource
-group_name         = "mig-test"
+group_name         = "resource"
 local              = "koreasouth"
 
 
