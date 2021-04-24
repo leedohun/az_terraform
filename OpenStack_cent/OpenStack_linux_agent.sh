@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ipconfig >> /tmp/result.txt
+ifconfig >> /tmp/result.txt
