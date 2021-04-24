@@ -1,6 +1,6 @@
 #provider
-gcp_credentials = "zonp-640@zcontest-296204_key.json"
-gcp_project     = "zcontest-296204"
+gcp_credentials = "file.json"
+gcp_project     = "project"
 gcp_region      = "asia-northeast3"
 gcp_zone        = "asia-northeast3-a"
 
