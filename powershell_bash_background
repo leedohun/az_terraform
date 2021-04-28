@@ -1,6 +1,0 @@
-#!/bin/bash
-
-ifconfig >> /tmp/result
-ifconfig >> /tmp/background & #background run
-
---> & (background run)
