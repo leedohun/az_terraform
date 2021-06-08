@@ -144,6 +144,8 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    1. **Edit a vars.tfvars File you want to create VM**
 
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
+
       * vars.tfvars data info:
          + tenancy_ocid :
          + user_ocid : 
@@ -164,8 +166,6 @@ Prepare your environment for authenticating and running your Terraform scripts. 
          + ssh_public_key_path :
          + ocpus : 
          + memory_in_gbs : 
-
-      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
 
