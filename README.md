@@ -107,18 +107,18 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    5. **Click add api key**
 
-      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/0h6Wa3WGv6TxKdlToZiSF1y8DKfb5OzUyk1FoNOwqcI3Uia4H-6en1OJ6QrKjax2/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API.png)
+      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/wTwhMhRpk_lhRDXu-4RnSznJrNTFkIEI53rONT3YTeCh-QFG-t-NSEeYzvQ2MSQ9/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API%20Key.png)
 
    6. **Under API Key Pairing, click Download Private Key and Download Public Key, and then click the Add button.**
 
-      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/LWIhfi13CPLouybPpS7Y4CBIz0C6kBRvSdnhk3CJPmvkZ1i3Q_oIT6FSPoSEVEY3/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API%20Key.png)
+      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/1j-WJIccEQU3XQs6I0Hif6_VQ9hhWtnGp6vAfuXv4iR2yIBLHjunW93NqjAPtvXX/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API.png)
 
    7. **Copy the results from Configuration File Preview onto the notepad.**
 
-      ![Configuration](https://objectstorage.ap-seoul-1.oraclecloud.com/p/-Zt31hsQBx_ZeziV66Ht-7lpHmaq6DaEEougk4XsNSAjKGTMex2IXXK217ksmbGr/n/cnfyb6dq82p9/b/test_bucket/o/Configuration.png)
+      ![Configuration](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FfXcylPsG9x_WGq1tON5N30HMQEKHWsNZFUWlDAtC3EJKEybxBogSNvdN16niP6z/n/cnfyb6dq82p9/b/test_bucket/o/Configuration.png)
 
 
-      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/gOxnRsQzQnxPaDe0qlPc7nOh4-Kdnzq6mu3OmJiUueDOPKhiBh3rPHaJDsaGJqi5/n/cnfyb6dq82p9/b/test_bucket/o/Result.png)
+      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JdXybfHHENL__Pivov6QdvoQ-P0Om2Rv7J2KpZs4uJJ0X24bJ2H3HvXx6uAN0Q69/n/cnfyb6dq82p9/b/test_bucket/o/Result.png)
 
   
 
