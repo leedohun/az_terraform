@@ -1,10 +1,13 @@
 OCI Terraform
 ============
 
->   > Before You Begin
->   > Prepare
->   > Install Terraform Data
->   > Start Terraform
+> Before You Begin
+
+> Prepare
+
+> Install Terraform Data
+
+> Start Terraform
 
 
 
