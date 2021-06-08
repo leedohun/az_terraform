@@ -154,7 +154,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
 
       ```script
-      Terraform.exe -chdir={terraform data file path} init
+      terraform.exe -chdir={terraform data file path} init
       ```
       ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/o3ND_XFU9-56CWa_-BeetXwzVm3PyJJO7KvqfX8HQa5cpaaK9Q8Re9ccJvQqUAKx/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init.png)
    
@@ -164,24 +164,24 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    4. **Creates an execution plan. By default, creating a plan consists of:**
 
       ```script
-      Terraform.exe -chdir={terraform data file path} plan -var-file={vars file path}
+      terraform.exe -chdir={terraform data file path} plan -var-file=vars.tfvars
       ```
 
       * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
       * Comparing the current configuration to the prior state and noting any differences.
       * Proposing a set of change actions that should, if applied, make the remote objects match the configuration.
 
-      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/6TzI1DE25F7qRGJr2dO4lPleSx-nzdV5OnqnHUBPvpohyKJXCcPg7hsu6YyNe19r/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
+      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/J9w6W5B9UJhYyT7jlquqpsthCtqWP-8PcSbixeyivpOveUiRv86Tqvd8SsixOD3t/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
 
    5. **Executes the actions proposed in a Terraform plan.**
 
       ```script
-      Terraform.exe -chdir={terraform data file path} -var-file={vars file path} -auto-approve apply
+      terraform.exe -chdir={terraform data file path} -var-file=vars.tfvars -auto-approve apply
       ```
 
-      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/D-Av4dANh4d5I_8Amyi--N1VjxM-SK2aMHQj3ph3txIyEdseuyJzaJMbKIWSkZdH/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20apply.png)
+      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Ms3aiK6vFToHI7SCm25ZJ9_-ZErLDCNEl2cK9J0DqvOOKwdr3rRmZWR9-7SNYV8v/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20apply.png)
 
-      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/fSnqf6g_jlGLFHzuiNQZ1v5ZbYK7EFn7V1zGTu2T3Qr4wfzCr-nBNAHlaJXMW_yd/n/cnfyb6dq82p9/b/test_bucket/o/result_terraform%20apply.png)
+      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/sHKXhKrmQ8fLVxDOcpApRnabVm4qGTa4eP4naW9EBg1o3ieT7-BS0dQG8yvMOfW5/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20apply%20result.png)
 
       **Note**
          * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
