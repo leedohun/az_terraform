@@ -1,6 +1,5 @@
 OCI Terraform
 ============
-
 > Before You Begin
 > 
 > Prepare
