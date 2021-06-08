@@ -128,15 +128,16 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/bHkV4FBOsJqlTk5LoAGB0er2eazIffo0GayOxpnXl3NmIFiw-OOmC_r7k3QnwX9k/n/cnfyb6dq82p9/b/test_bucket/o/oci.zip)**
 
    2. **Unzip OCI Terraform data**
-      ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/prTLqef95IlqW3cUVx69HQXbajaVw8JjmyMIswxKEzKv1UdHSab4TP17R9BxoY59/n/cnfyb6dq82p9/b/test_bucket/o/result_Extract_zip.png)
+      ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
   
 
 
 ## Start Terraform
 
    1. **Edit a vars.tfvars File you want to create VM**
-      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/OamyrtOzj--tgs_MItd7Ns17tDiHrwXRPo86I-HX81_D1AnYoBY5a-DrYUON6whZ/n/cnfyb6dq82p9/b/test_bucket/o/open_vars.tfvars.png)
-      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/MpiLFhwOzZxEpR0JhRTE_mCVurhRsbtlcBZ5zzzckjTKFa5XA7uzlz5igeLvBHFq/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars_update.png)
+
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/chAL1E_3a-ucI79AZnLM1PpvcYyBh5IB8qjdQf8-_NZz8M4ZtVVfaCi_90MV4e8T/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
+      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/0l8UwfvnAB_QIowwmP6UxdqdeWa2feyulPYuMVEf0NhC7qzHUJhdwixfJLQUnfZF/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
    ### OS and OS_Version Manual
    | | | | | | | | | | | | | |
@@ -146,9 +147,11 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
 
    2. **Start CMD**
-      ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/e8Z1D4LRTo5lMKNazFMPk336Tj7f3dDBiiTY3nncP55Mcn3_ZamU7rh95bdJ_f6T/n/cnfyb6dq82p9/b/test_bucket/o/run_cmd.png)
+
+      ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
    3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+
       ```script
       Terraform.exe -chdir={terraform data file path} init
       ```
@@ -158,6 +161,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
 
    4. **Creates an execution plan. By default, creating a plan consists of:**
+
       ```script
       Terraform.exe -chdir={terraform data file path} plan -var-file={vars file path}
       ```
@@ -169,6 +173,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/6TzI1DE25F7qRGJr2dO4lPleSx-nzdV5OnqnHUBPvpohyKJXCcPg7hsu6YyNe19r/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
 
    5. **Executes the actions proposed in a Terraform plan.**
+
       ```script
       Terraform.exe -chdir={terraform data file path} -var-file={vars file path} -auto-approve apply
       ```
