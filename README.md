@@ -129,7 +129,11 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    2. **Unzip OCI Terraform data**
       ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
-  
+
+   3. **SCRIPTS**
+      Linux script : Additional user data to this file. However, Linux must use the grammar of bash.
+      Windows script : Additional user data to this file. However, Windows must use the grammar of powershell.
+
 
 
 ## Start Terraform
@@ -183,7 +187,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    4. **Executes the actions proposed in a Terraform plan.**
 
       ```script
-      terraform.exe -chdir={terraform data file path} -var-file=vars.tfvars -auto-approve apply
+      terraform.exe -chdir={terraform data file path} apply -var-file=vars.tfvars -auto-approve
       ```
       **Note**
       * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
