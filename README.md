@@ -136,7 +136,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    1. **Edit a vars.tfvars File you want to create VM**
 
-      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/chAL1E_3a-ucI79AZnLM1PpvcYyBh5IB8qjdQf8-_NZz8M4ZtVVfaCi_90MV4e8T/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
 
@@ -147,44 +147,50 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
    | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
 
-   2. **Start CMD**
+   1. **Start CMD**
 
       ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
-   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+   2. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
 
       ```script
       terraform.exe -chdir={terraform data file path} init
       ```
+
+      **Note**
+      * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
+
       ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/o3ND_XFU9-56CWa_-BeetXwzVm3PyJJO7KvqfX8HQa5cpaaK9Q8Re9ccJvQqUAKx/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init.png)
    
       ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/NqZBWtKkyXdEa1CNcpLMlmJGFeCGR4rldVFdVesAJVjCwpCkEKnwDNlRbA4GNtOS/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init%20result.png)
 
 
-   4. **Creates an execution plan. By default, creating a plan consists of:**
-
-      ```script
-      terraform.exe -chdir={terraform data file path} plan -var-file=vars.tfvars
-      ```
+   3. **Creates an execution plan. By default, creating a plan consists of:**
 
       * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
       * Comparing the current configuration to the prior state and noting any differences.
       * Proposing a set of change actions that should, if applied, make the remote objects match the configuration.
 
+      ```script
+      terraform.exe -chdir={terraform data file path} plan -var-file=vars.tfvars
+      ```
+
+      **Note**
+      * -var-file : Sets values for potentially many [input variables](https://www.terraform.io/docs/language/values/variables.html) declared in the root module of the configuration, using definitions from a ["tfvars" file](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files). Use this option multiple times to include values from more than one file.
+
       ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/J9w6W5B9UJhYyT7jlquqpsthCtqWP-8PcSbixeyivpOveUiRv86Tqvd8SsixOD3t/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
 
-   5. **Executes the actions proposed in a Terraform plan.**
+   4. **Executes the actions proposed in a Terraform plan.**
 
       ```script
       terraform.exe -chdir={terraform data file path} -var-file=vars.tfvars -auto-approve apply
       ```
+      **Note**
+      * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
 
       ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Ms3aiK6vFToHI7SCm25ZJ9_-ZErLDCNEl2cK9J0DqvOOKwdr3rRmZWR9-7SNYV8v/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20apply.png)
 
       ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/sHKXhKrmQ8fLVxDOcpApRnabVm4qGTa4eP4naW9EBg1o3ieT7-BS0dQG8yvMOfW5/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20apply%20result.png)
 
-      **Note**
-         * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
-         * -var-file : Sets values for potentially many [input variables](https://www.terraform.io/docs/language/values/variables.html) declared in the root module of the configuration, using definitions from a ["tfvars" file](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files). Use this option multiple times to include values from more than one file.
-         * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
+
     
