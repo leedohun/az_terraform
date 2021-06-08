@@ -35,8 +35,6 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 ### Install Terraform
    Install the latest version of Terraform **v13.0+**:
 
-   windows --> cmd
-
    1. In your environment, check your Terraform version.
       ```script
       terraform -v
@@ -50,6 +48,8 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ```script
       https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip
       ```
+
+      * IF you use Windows os, Use the cmd command line
 
    4. In your environment, create a temp directory and change to that directory:
       ```script
@@ -147,15 +147,23 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
       * vars.tfvars data info:
-         + tenancy_ocid :
-         + user_ocid : 
-         + private_key_path : 
-         + fingerprint : 
-         + region :
-         + compartment_id :
-         + shape :
+         + tenancy_ocid : Use the tenancy noted in API Key creation.
+         + user_ocid : Use the user noted in API Key creation.
+         + private_key_path : Use the private_key downloaded in API Key creation.
+         + fingerprint : Use the fingerprint noted in API Key creation.
+         + region : Use the region noted in API Key creation.
+         + compartment_id : Use the tenancy noted in API Key creation.
+         + shape : 
+            - Flexible Shapes : VM.Standard.E3.Flex, VM.Standard.E4.Flex, VM.Optimized3.Flex, VM.Standard.A1.Flex
+            - Standard Shapes : VM.Standard2.1, VM.Standard2.2, VM.Standard2.4, VM.Standard2.8, VM.Standard2.16, VM.Standard2.24
          + os :
          + os_version : 
+            ### OS and OS_Version Manual
+            | | | | | | | | | | | | | |
+            |-|-------------|-------------|----------------|--------|----------|-----------|---------|---------|---------|-------------|-------------|-------------|
+            | | Windows2019 | Windows2016 | Windows2012 R2 | Linux8 | Linux7.9 | Linux6.10 | centos8 | centos7 | centos8 | ubuntu20.04 | ubuntu18.04 | ubuntu16.04 |
+            | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
+            | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
          + block_volume_count :
          + block_volume_size :
          + block_volume_diskplay_name :
@@ -169,18 +177,11 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
 
-   ### OS and OS_Version Manual
-   | | | | | | | | | | | | | |
-   |-|-------------|-------------|----------------|--------|----------|-----------|---------|---------|---------|-------------|-------------|-------------|
-   | | Windows2019 | Windows2016 | Windows2012 R2 | Linux8 | Linux7.9 | Linux6.10 | centos8 | centos7 | centos8 | ubuntu20.04 | ubuntu18.04 | ubuntu16.04 |
-   | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
-   | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
-
-   1. **Start CMD**
+   2. **Start CMD**
 
       ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
-   2. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
 
       ```script
       terraform.exe -chdir={terraform data file path} init
@@ -194,7 +195,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/NqZBWtKkyXdEa1CNcpLMlmJGFeCGR4rldVFdVesAJVjCwpCkEKnwDNlRbA4GNtOS/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init%20result.png)
 
 
-   3. **Creates an execution plan. By default, creating a plan consists of:**
+   4. **Creates an execution plan. By default, creating a plan consists of:**
 
       * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
       * Comparing the current configuration to the prior state and noting any differences.
@@ -209,7 +210,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/J9w6W5B9UJhYyT7jlquqpsthCtqWP-8PcSbixeyivpOveUiRv86Tqvd8SsixOD3t/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
 
-   4. **Executes the actions proposed in a Terraform plan.**
+   5. **Executes the actions proposed in a Terraform plan.**
 
       ```script
       terraform.exe -chdir={terraform data file path} apply -var-file=vars.tfvars -auto-approve
