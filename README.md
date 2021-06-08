@@ -133,6 +133,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    3. **SCRIPTS**
 
       Linux script : Additional user data to this file. However, Linux must use the grammar of bash.
+      
       Windows script : Additional user data to this file. However, Windows must use the grammar of powershell.
 
 
