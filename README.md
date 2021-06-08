@@ -96,10 +96,10 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![Account User](https://objectstorage.ap-seoul-1.oraclecloud.com/p/ZOKRkEnpLI3IHFs80_aW3Ciy6HTd-skSGzNuZ2fzSywbU6MSdWf2U5dOxN9ID_1X/n/cnfyb6dq82p9/b/test_bucket/o/Select%20Users.png)  
 
    3. **Select a user account to use.**
-      ![Account Users](https://objectstorage.ap-seoul-1.oraclecloud.com/p/mZP_d9myS9aL_V3lTFWWtr4qU9puC_l3rkUGxclnR-aTUGedd4YEn4faWMU3jww8/n/cnfyb6dq82p9/b/test_bucket/o/Select%20API.png)
+      ![Account Users](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Mj3mBoNkl6NWjDLhtxfe63J-4Lq2r6VyKoZIxFOYEus_uUxy4KO4yL8-1O-EXKAX/n/cnfyb6dq82p9/b/test_bucket/o/Account%20Users.png)
 
    4. **Click api-key in the lower left resource**
-      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/loI-emg6u0lh9fUSBcYtOxB3sHrZdReHE8w9UShac3o07rV1YxGrdDRomJedjeFm/n/cnfyb6dq82p9/b/test_bucket/o/Select%20API.png)
+      ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/mZP_d9myS9aL_V3lTFWWtr4qU9puC_l3rkUGxclnR-aTUGedd4YEn4faWMU3jww8/n/cnfyb6dq82p9/b/test_bucket/o/Select%20API.png)
 
    5. **Click add api key**
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/0h6Wa3WGv6TxKdlToZiSF1y8DKfb5OzUyk1FoNOwqcI3Uia4H-6en1OJ6QrKjax2/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API.png)
