@@ -137,7 +137,8 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    1. **Edit a vars.tfvars File you want to create VM**
 
       ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/chAL1E_3a-ucI79AZnLM1PpvcYyBh5IB8qjdQf8-_NZz8M4ZtVVfaCi_90MV4e8T/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
-      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/0l8UwfvnAB_QIowwmP6UxdqdeWa2feyulPYuMVEf0NhC7qzHUJhdwixfJLQUnfZF/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
+
+      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
 
    ### OS and OS_Version Manual
    | | | | | | | | | | | | | |
@@ -155,9 +156,9 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ```script
       Terraform.exe -chdir={terraform data file path} init
       ```
-      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/-MbOI7iohBzYf0nZigfNbluXOaa8rRypdsxlBNWSwNKFzpRk0e-bGGbtYPRXmj6f/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init.png)
+      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/o3ND_XFU9-56CWa_-BeetXwzVm3PyJJO7KvqfX8HQa5cpaaK9Q8Re9ccJvQqUAKx/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init.png)
    
-      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T2z5bSTqorrNiI6jSOU8McxhVhPYiXkhUnEsvj3aA0xiXeI6vVmwb0IqZcxLNNcE/n/cnfyb6dq82p9/b/test_bucket/o/result_terraform%20init.png)
+      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/NqZBWtKkyXdEa1CNcpLMlmJGFeCGR4rldVFdVesAJVjCwpCkEKnwDNlRbA4GNtOS/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init%20result.png)
 
 
    4. **Creates an execution plan. By default, creating a plan consists of:**
