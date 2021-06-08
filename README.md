@@ -162,14 +162,14 @@ Prepare your environment for authenticating and running your Terraform scripts. 
             |-|-------------|-------------|----------------|--------|----------|-----------|---------|---------|---------|-------------|-------------|-------------|
             | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
             | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
-         + block_volume_count :
-         + block_volume_size :
-         + block_volume_diskplay_name :
-         + blcok_volume_device_path :
-         + diskplay_name :
-         + subet_ocid :
-         + user_data_path :
-         + ssh_public_key_path :
+         + block_volume_count : Number of volumes on server you want to create
+         + block_volume_size : Size of volume on server you want to create
+         + block_volume_diskplay_name : Name of volume on server you want to create
+         + blcok_volume_device_path : 
+         + diskplay_name : Name of Server you want to
+         + subet_ocid : 
+         + user_data_path : 
+         + ssh_public_key_path : 
          + ocpus : 
          + memory_in_gbs : 
 
