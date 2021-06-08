@@ -90,25 +90,33 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    Create RSA keys for API signing into your **Oracle Cloud Infrastructure account**.
 
    1. **Log in to the Oracle Cloud site and access the user portal.**
+
       ![Login](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UintikT5Bz9_ciVuEgqCJ1b1d34PzwoDZM1HV2trqjydCVx7XQbaOLRRR5PWep9T/n/cnfyb6dq82p9/b/test_bucket/o/login.png)  
 
    2. **Enter the User menu.**
+
       ![Account User](https://objectstorage.ap-seoul-1.oraclecloud.com/p/ZOKRkEnpLI3IHFs80_aW3Ciy6HTd-skSGzNuZ2fzSywbU6MSdWf2U5dOxN9ID_1X/n/cnfyb6dq82p9/b/test_bucket/o/Select%20Users.png)  
 
    3. **Select a user account to use.**
+
       ![Account Users](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Mj3mBoNkl6NWjDLhtxfe63J-4Lq2r6VyKoZIxFOYEus_uUxy4KO4yL8-1O-EXKAX/n/cnfyb6dq82p9/b/test_bucket/o/Account%20Users.png)
 
    4. **Click api-key in the lower left resource**
+
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/mZP_d9myS9aL_V3lTFWWtr4qU9puC_l3rkUGxclnR-aTUGedd4YEn4faWMU3jww8/n/cnfyb6dq82p9/b/test_bucket/o/Select%20API.png)
 
    5. **Click add api key**
+
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/0h6Wa3WGv6TxKdlToZiSF1y8DKfb5OzUyk1FoNOwqcI3Uia4H-6en1OJ6QrKjax2/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API.png)
 
    6. **Under API Key Pairing, click Download Private Key and Download Public Key, and then click the Add button.**
+
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/LWIhfi13CPLouybPpS7Y4CBIz0C6kBRvSdnhk3CJPmvkZ1i3Q_oIT6FSPoSEVEY3/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API%20Key.png)
 
    7. **Copy the results from Configuration File Preview onto the notepad.**
+
       ![Configuration](https://objectstorage.ap-seoul-1.oraclecloud.com/p/-Zt31hsQBx_ZeziV66Ht-7lpHmaq6DaEEougk4XsNSAjKGTMex2IXXK217ksmbGr/n/cnfyb6dq82p9/b/test_bucket/o/Configuration.png)
+
 
       ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/gOxnRsQzQnxPaDe0qlPc7nOh4-Kdnzq6mu3OmJiUueDOPKhiBh3rPHaJDsaGJqi5/n/cnfyb6dq82p9/b/test_bucket/o/Result.png)
 
