@@ -1,5 +1,6 @@
 OCI Terraform
 ============
+
 > Before You Begin
 > 
 > Prepare
@@ -33,6 +34,8 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
 ### Install Terraform
    Install the latest version of Terraform **v13.0+**:
+
+   windows --> cmd
 
    1. In your environment, check your Terraform version.
       ```script
@@ -96,7 +99,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![Account User](https://objectstorage.ap-seoul-1.oraclecloud.com/p/ZOKRkEnpLI3IHFs80_aW3Ciy6HTd-skSGzNuZ2fzSywbU6MSdWf2U5dOxN9ID_1X/n/cnfyb6dq82p9/b/test_bucket/o/Select%20Users.png)  
 
-   3. **Select a user account to use.**
+   3. **Choice User Account Name to use.**
 
       ![Account Users](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Mj3mBoNkl6NWjDLhtxfe63J-4Lq2r6VyKoZIxFOYEus_uUxy4KO4yL8-1O-EXKAX/n/cnfyb6dq82p9/b/test_bucket/o/Account%20Users.png)
 
@@ -108,7 +111,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/wTwhMhRpk_lhRDXu-4RnSznJrNTFkIEI53rONT3YTeCh-QFG-t-NSEeYzvQ2MSQ9/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API%20Key.png)
 
-   6. **Under API Key Pairing, click Download Private Key and Download Public Key, and then click the Add button.**
+   6. **Under API Key Pairing, click Download Private Key and Download Public Key, and then click the Add button. If there are more than three API Key, Delete API Key or use another User Account Name.**
 
       ![Api-Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/1j-WJIccEQU3XQs6I0Hif6_VQ9hhWtnGp6vAfuXv4iR2yIBLHjunW93NqjAPtvXX/n/cnfyb6dq82p9/b/test_bucket/o/Add%20API.png)
 
@@ -132,7 +135,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    3. **SCRIPTS**
 
       Linux script : Additional user data to this file. However, Linux must use the grammar of bash.
-      
+
       Windows script : Additional user data to this file. However, Windows must use the grammar of powershell.
 
 
@@ -140,6 +143,27 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 ## Start Terraform
 
    1. **Edit a vars.tfvars File you want to create VM**
+
+      * vars.tfvars data info:
+         + tenancy_ocid :
+         + user_ocid : 
+         + private_key_path : 
+         + fingerprint : 
+         + region :
+         + compartment_id :
+         + shape :
+         + os :
+         + os_version : 
+         + block_volume_count :
+         + block_volume_size :
+         + block_volume_diskplay_name :
+         + blcok_volume_device_path :
+         + diskplay_name :
+         + subet_ocid :
+         + user_data_path :
+         + ssh_public_key_path :
+         + ocpus : 
+         + memory_in_gbs : 
 
       ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
