@@ -128,15 +128,16 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![Select VCM User Account Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5prXUWaNWNUVGCUtbHfstzC_jEMIXQGzOoF2VfEQDp4D9DYptUVBlWdOGNSBNv5F/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20VCN.png)
 
    1. **Choice Subnets Name to use**
-      
-      ![Select Subnets Namd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/COkmv-Hnf2SEdSeCJaMj2YGUpdTQxqUOIP6MIOzX_Uw9U0Ag87vhyhR0Xj46tKlW/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20Subnet.png)
-      
+
+      ![Select Subnets Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/COkmv-Hnf2SEdSeCJaMj2YGUpdTQxqUOIP6MIOzX_Uw9U0Ag87vhyhR0Xj46tKlW/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20Subnet.png)
+
    1. **Copy the Subnet OCID onto the notepad**
 
       ![Subnet OCID](https://objectstorage.ap-seoul-1.oraclecloud.com/p/L432fY2P28qhOKUfoVtCnnRjJbfSJF-gj6zfHVsya8m07v923kS1NXTEa2zGqtGY/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Subnet%20OCID.png)
 
+   1. **Result**
 
-      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JdXybfHHENL__Pivov6QdvoQ-P0Om2Rv7J2KpZs4uJJ0X24bJ2H3HvXx6uAN0Q69/n/cnfyb6dq82p9/b/test_bucket/o/Result.png)
+      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/d3DO2uh2rqpVCS2hPOWWju16rVKWNFcGoFTOMpFn00QhnsJYgK4ew5OWAEjcaRbJ/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/result.png)
 
   
 
@@ -148,11 +149,11 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    2. **Unzip OCI Terraform data**
       ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
 
-   3. **SCRIPTS**
+   3. **User date**
 
-      Linux script : Additional user data to this file. However, Linux must use the grammar of bash.
-
-      Windows script : Additional user data to this file. However, Windows must use the grammar of powershell.
+      * If you want to add the user date at the same time as the server is created, modify the user data for the server.
+         + Linux User Date : Additional user data to this file. However, Linux must use the grammar of bash.
+         + Windows User Data : Additional user data to this file. However, Windows must use the grammar of powershell.
 
 
 
@@ -191,7 +192,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
          + ocpus : You must enter the number of CPUs when using Flexible_shape. The range is from 1 to 64.
          + memory_in_gbs : When using Flexible_shape, you must select memory capacity. The range is from cpu count to 1024.
 
-      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
+      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUb0M_3gy8hI1CCLZM5cO3q3PLKRyzaoA2GbHs6h4ZRTIO4TJd-lYk61_e1LBboy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
 
    1. **Start CMD**
 
