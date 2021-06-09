@@ -233,4 +233,5 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/SoxEo0Ow-RjYmndQ6_7Zq03BabF2XEl2TutQCz4WcvWnh0eUIl6T5Shhl-YTyrIy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply.png)
 
+    6. ""Result""
       ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/tqi-vkce_08TSsvkoZh-VL1lPxiqWAFaeMGwhKI2RiuFJ08G7buB8ePms0kS-mad/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply%20result.png)
