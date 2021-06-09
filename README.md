@@ -118,6 +118,22 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    7. **Copy the results from Configuration File Preview onto the notepad.**
 
       ![Configuration](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FfXcylPsG9x_WGq1tON5N30HMQEKHWsNZFUWlDAtC3EJKEybxBogSNvdN16niP6z/n/cnfyb6dq82p9/b/test_bucket/o/Configuration.png)
+   
+   8. **Select Networking from the menu, then select Virtual Cloud Networks**
+
+      ![Networking-Virtual Cloud Network](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Ulj5DJRXrogaUhSUYiYLp4q4LUiht9xkaiGMOpx3QOhFnrZrC8nbQ1SJ49UDTGrD/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Networking-Virtual%20Cloud%20Network.png)
+   
+   9. **Choice VCN User Account Name to use**
+
+      ![Select VCM User Account Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5prXUWaNWNUVGCUtbHfstzC_jEMIXQGzOoF2VfEQDp4D9DYptUVBlWdOGNSBNv5F/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20VCN.png)
+
+   10. **Choice Subnets Name to use**
+
+      ![Select Subnets Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/COkmv-Hnf2SEdSeCJaMj2YGUpdTQxqUOIP6MIOzX_Uw9U0Ag87vhyhR0Xj46tKlW/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20Subnet.png)
+
+   11. **Copy the Subnet OCID onto the notepad**
+
+      ![Subnet OCID](https://objectstorage.ap-seoul-1.oraclecloud.com/p/L432fY2P28qhOKUfoVtCnnRjJbfSJF-gj6zfHVsya8m07v923kS1NXTEa2zGqtGY/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Subnet%20OCID.png)
 
 
       ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JdXybfHHENL__Pivov6QdvoQ-P0Om2Rv7J2KpZs4uJJ0X24bJ2H3HvXx6uAN0Q69/n/cnfyb6dq82p9/b/test_bucket/o/Result.png)
@@ -127,7 +143,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 ## Install OCI Terraform Data
    Install the **terraform data** you need to make your OCI vm.
 
-   1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/bHkV4FBOsJqlTk5LoAGB0er2eazIffo0GayOxpnXl3NmIFiw-OOmC_r7k3QnwX9k/n/cnfyb6dq82p9/b/test_bucket/o/oci.zip)**
+   1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/md-QFY5V7vgOWLAN1-KVfMijKOWAb9zFhsL2FgqIaXNaTY7cz3VuJqF1GzT2Tx3V/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/oci_terraform.zip)**
 
    2. **Unzip OCI Terraform data**
       ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
@@ -147,12 +163,12 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
 
       * vars.tfvars data info:
-         + tenancy_ocid : Use the tenancy noted in API Key creation.
-         + user_ocid : Use the user noted in API Key creation.
-         + private_key_path : Use the private_key downloaded in API Key creation.
+         + tenancy : Use the tenancy noted in API Key creation.
+         + user : Use the user noted in API Key creation.
+         + key_file : Use the absolute path of private_key downloaded from API Key generation.
          + fingerprint : Use the fingerprint noted in API Key creation.
          + region : Use the region noted in API Key creation.
-         + compartment_id : Use the tenancy noted in API Key creation.
+         + compartment : Tenancy or compartment for that account
          + shape : 
             - Flexible Shapes : VM.Standard.E3.Flex, VM.Standard.E4.Flex, VM.Optimized3.Flex, VM.Standard.A1.Flex
             - Standard Shapes : VM.Standard2.1, VM.Standard2.2, VM.Standard2.4, VM.Standard2.8, VM.Standard2.16, VM.Standard2.24
@@ -165,21 +181,23 @@ Prepare your environment for authenticating and running your Terraform scripts. 
          + block_volume_count : Number of volumes on server you want to create
          + block_volume_size : Size of volume on server you want to create
          + block_volume_diskplay_name : Name of volume on server you want to create
-         + blcok_volume_device_path : 
+         + blcok_volume_device_path : Specifies the path to the disk when you add it to the Linux family operating system.
          + diskplay_name : Name of Server you want to
-         + subet_ocid : 
-         + user_data_path : 
-         + ssh_public_key_path : 
-         + ocpus : 
-         + memory_in_gbs : 
+         + subet_ocid : Use the account's subnet_ocid.
+         + user_data_path :
+            - Enter the path to the txt file in the scripts folder of the downloaded oci_terraform. 
+            - Use the file oci_linux_cloud_init_txt for Linux-like operating systems and the file oci_windows_cloud_init_txt for Windows-like operating systems.
+         + ssh_public_key_path : Linux-like operating systems require the file path of the user's ssh_public key.
+         + ocpus : You must enter the number of CPUs when using Flexible_shape. The range is from 1 to 64.
+         + memory_in_gbs : When using Flexible_shape, you must select memory capacity. The range is from cpu count to 1024.
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/RQ6xeNPFJHrX_N_UX5WmLxFj99aPKMRzgn94gWMopEYqdM7B_ue-M-DSkwRh0yFC/n/cnfyb6dq82p9/b/test_bucket/o/vars.tfvars%20result.png)
 
-   2. **Start CMD**
+   1. **Start CMD**
 
       ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
-   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+   2. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
 
       ```script
       terraform.exe -chdir={terraform data file path} init
@@ -193,7 +211,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/NqZBWtKkyXdEa1CNcpLMlmJGFeCGR4rldVFdVesAJVjCwpCkEKnwDNlRbA4GNtOS/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20init%20result.png)
 
 
-   4. **Creates an execution plan. By default, creating a plan consists of:**
+   3. **Creates an execution plan. By default, creating a plan consists of:**
 
       * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
       * Comparing the current configuration to the prior state and noting any differences.
@@ -208,7 +226,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/J9w6W5B9UJhYyT7jlquqpsthCtqWP-8PcSbixeyivpOveUiRv86Tqvd8SsixOD3t/n/cnfyb6dq82p9/b/test_bucket/o/terraform%20plan.png)
 
-   5. **Executes the actions proposed in a Terraform plan.**
+   4. **Executes the actions proposed in a Terraform plan.**
 
       ```script
       terraform.exe -chdir={terraform data file path} apply -var-file=vars.tfvars -auto-approve
