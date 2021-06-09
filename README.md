@@ -149,11 +149,6 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    2. **Unzip OCI Terraform data**
       ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
 
-   3. **User date**
-
-      * If you want to add the user date at the same time as the server is created, modify the user data for the server.
-         + Linux User Date : Additional user data to this file. However, Linux must use the grammar of bash.
-         + Windows User Data : Additional user data to this file. However, Windows must use the grammar of powershell.
 
 
 
