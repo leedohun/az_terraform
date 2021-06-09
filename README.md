@@ -156,7 +156,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    1. **Edit a vars.tfvars File you want to create VM**
 
-      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T64eUvPPIUStTyssO4SWbYAWjEcOoR9B6rHoJNMw-EDJGDhb47YSEAds0gZ52IZ8/n/cnfyb6dq82p9/b/test_bucket/o/Edit%20a%20vars.tfvars.png)
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Zkk5JV9gCkimXF_jhPt-ZAk5DRYHZ0S7wsess27739PCsa3-UK-XLuCWaX5jpzG9/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
 
       * vars.tfvars data info:
          + tenancy : Use the tenancy noted in API Key creation.
@@ -189,11 +189,11 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUb0M_3gy8hI1CCLZM5cO3q3PLKRyzaoA2GbHs6h4ZRTIO4TJd-lYk61_e1LBboy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
 
-   1. **Start CMD**
+   2. **Start CMD**
 
       ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
-   2. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
 
       ```script
       terraform.exe -chdir={terraform data file path} init
@@ -207,7 +207,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5mzjf9AlmTRbUvg2QeSV3RzpqSvDWjqeQVmji9vYBxYqKTeTIrBdqvYySFTweOCC/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init%20result.png)
 
 
-   3. **Creates an execution plan. By default, creating a plan consists of:**
+   4. **Creates an execution plan. By default, creating a plan consists of:**
 
       * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
       * Comparing the current configuration to the prior state and noting any differences.
@@ -223,7 +223,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
       ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FvA5NEq3E1wlqv-8HD4SVMjAyXVSWl7Kc8Ot98rs5w3vBgNBIxAp4856DPqTrAiU/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20plan.png)
 
-   4. **Executes the actions proposed in a Terraform plan.**
+   5. **Executes the actions proposed in a Terraform plan.**
 
       ```script
       terraform.exe -chdir={terraform data file path} apply -var-file={vars file with user specified name} -auto-approve
