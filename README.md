@@ -156,7 +156,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
 
    1. **Edit a vars.tfvars File you want to create VM**
 
-      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Zkk5JV9gCkimXF_jhPt-ZAk5DRYHZ0S7wsess27739PCsa3-UK-XLuCWaX5jpzG9/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JCZF2EFjD5hU-isTloeWYfU8osHFwFI0oMoDrKY7dSp8ghvuHF4CHIHEqr2bRcXi/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Edit%20a%20vars.tfvars.png)
 
       * vars.tfvars data info:
          + tenancy : Use the tenancy noted in API Key creation.
