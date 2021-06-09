@@ -147,8 +147,7 @@ Prepare your environment for authenticating and running your Terraform scripts. 
    1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/md-QFY5V7vgOWLAN1-KVfMijKOWAb9zFhsL2FgqIaXNaTY7cz3VuJqF1GzT2Tx3V/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/oci_terraform.zip)**
 
    2. **Unzip OCI Terraform data**
-      ![result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/HLcZ1BexX5bj_CuTPBMIxREh7JGyJG0A-T1exKMpSrYmRh123lo5CJbBo5JAqMXe/n/cnfyb6dq82p9/b/test_bucket/o/Unzip%20OCI%20Terraform%20data.png)
-
+      ![OCI terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/vdefQu1xjF4FFLeaNQwGmBegQr1ji0QwXKoXB4MB6bgsiquRNjiq1qoA3wezVOst/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20OCi%20data.png)
 
 
 
