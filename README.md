@@ -202,9 +202,9 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       **Note**
       * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
 
-      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/ZkhMNIS5vSJQGfn47tcg15gf4ez57I62kFicuyfr3X82LwYS_UAbAYw9rU8qL-un/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init.png)
+      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/PxVvenXLonevJC75fqTtJBehD7AHcSMOaWFoM1OSfUyquxl_uFZ0Z2kjBheE_rz8/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init.png)
    
-      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/fRskH8DxYISvhBImmrtBahzkpTxivR710KkjXbRJrg2OIGuFp9e1vRHdhdAUK1RJ/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init%20result.png)
+      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5mzjf9AlmTRbUvg2QeSV3RzpqSvDWjqeQVmji9vYBxYqKTeTIrBdqvYySFTweOCC/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init%20result.png)
 
 
    3. **Creates an execution plan. By default, creating a plan consists of:**
@@ -214,25 +214,23 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       * Proposing a set of change actions that should, if applied, make the remote objects match the configuration.
 
       ```script
-      terraform.exe -chdir={terraform data file path} plan -var-file=vars.tfvars
+      terraform.exe -chdir={terraform data file path} plan -var-file={vars file with user specified name}
       ```
 
       **Note**
       * -var-file : Sets values for potentially many [input variables](https://www.terraform.io/docs/language/values/variables.html) declared in the root module of the configuration, using definitions from a ["tfvars" file](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files). Use this option multiple times to include values from more than one file.
+      * The file name of vars.tfvars can be changed.
 
-      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/-ZwUeS4HfmXq5BGlhKdkPJ37mcy_WfI8ugWc71VE8ZmH7vgf15IYO5nlsDZAamAG/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20plan.png)
+      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FvA5NEq3E1wlqv-8HD4SVMjAyXVSWl7Kc8Ot98rs5w3vBgNBIxAp4856DPqTrAiU/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20plan.png)
 
    4. **Executes the actions proposed in a Terraform plan.**
 
       ```script
-      terraform.exe -chdir={terraform data file path} apply -var-file=vars.tfvars -auto-approve
+      terraform.exe -chdir={terraform data file path} apply -var-file={vars file with user specified name} -auto-approve
       ```
       **Note**
       * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
 
-      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/8EdEBWUDuJUPDhQos6z4R911vp93t6qYDYx4P8pLP30Se9zlNPAJW2CqwtSbgbXD/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply.png)
+      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/SoxEo0Ow-RjYmndQ6_7Zq03BabF2XEl2TutQCz4WcvWnh0eUIl6T5Shhl-YTyrIy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply.png)
 
-      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/4iRsoYEsTpo3w3rr4TiK6b7CTKJtXaeFLnD0Qy4MYLwtp8QsX5ICELFuIAyTmqv4/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply%20result.png)
-
-
-    
+      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/tqi-vkce_08TSsvkoZh-VL1lPxiqWAFaeMGwhKI2RiuFJ08G7buB8ePms0kS-mad/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply%20result.png)
