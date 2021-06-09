@@ -128,9 +128,9 @@ Prepare your environment for authenticating and running your Terraform scripts. 
       ![Select VCM User Account Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5prXUWaNWNUVGCUtbHfstzC_jEMIXQGzOoF2VfEQDp4D9DYptUVBlWdOGNSBNv5F/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20VCN.png)
 
    10. **Choice Subnets Name to use**
-
-      ![Select Subnets Name](https://objectstorage.ap-seoul-1.oraclecloud.com/p/COkmv-Hnf2SEdSeCJaMj2YGUpdTQxqUOIP6MIOzX_Uw9U0Ag87vhyhR0Xj46tKlW/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20Subnet.png)
-
+      
+      ![Select Subnets Namd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/COkmv-Hnf2SEdSeCJaMj2YGUpdTQxqUOIP6MIOzX_Uw9U0Ag87vhyhR0Xj46tKlW/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Select%20Subnet.png)
+      
    11. **Copy the Subnet OCID onto the notepad**
 
       ![Subnet OCID](https://objectstorage.ap-seoul-1.oraclecloud.com/p/L432fY2P28qhOKUfoVtCnnRjJbfSJF-gj6zfHVsya8m07v923kS1NXTEa2zGqtGY/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/Subnet%20OCID.png)
