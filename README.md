@@ -167,33 +167,32 @@ NBP Terraform
       ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Ti1ET7cJke1eJysmdCONyCps49CAsoSfP8jHOrvEZgbb0PKiZdPspIWqUJQy0HSo/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/vars.tfvars.png)
 
       * vars.tfvars data 정보:
-         + tenancy : Use the tenancy noted in API Key creation.
-         + user : Use the user noted in API Key creation.
-         + key_file : Use the absolute path of private_key downloaded from API Key generation.
-         + fingerprint : Use the fingerprint noted in API Key creation.
-         + region : Use the region noted in API Key creation.
-         + compartment : Tenancy or compartment for that account
-         + shape : 
-            - Flexible Shapes : VM.Standard.E3.Flex, VM.Standard.E4.Flex, VM.Optimized3.Flex, VM.Standard.A1.Flex
-            - Standard Shapes : VM.Standard2.1, VM.Standard2.2, VM.Standard2.4, VM.Standard2.8, VM.Standard2.16, VM.Standard2.24
-         + os :
-         + os_version : 
-            | | Windows2019 | Windows2016 | Windows2012 R2 | Linux8 | Linux7.9 | Linux6.10 | centos8 | centos7 | centos8 | ubuntu20.04 | ubuntu18.04 | ubuntu16.04 |
-            |-|-------------|-------------|----------------|--------|----------|-----------|---------|---------|---------|-------------|-------------|-------------|
-            | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
-            | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
-         + block_volume_count : Number of volumes on server you want to create
-         + block_volume_size : Size of volume on server you want to create
-         + block_volume_diskplay_name : Name of volume on server you want to create
-         + blcok_volume_device_path : Specifies the path to the disk when you add it to the Linux family operating system.
-         + diskplay_name : Name of Server you want to
-         + subet_ocid : Use the account's subnet_ocid.
+         + access_key_ID : 플랫폼 인증키에서 메모해둔 Access_Key_ID.
+         + secret_key : 플랫폼 인증키에서 메모해둔 Secret_Key.
+         + region : Use the absolute path of private_key downloaded from API Key generation.
+            | | | | | | | |
+            |-|-|-|-|-|-|-|
+            | region | KR | HK | SGN | JPN | USWN | DEN | 
+         + display_name : 생성할 VM의 이름
+         + server_image_product_code : 서버 이미지
+         + server_product_code : 서버 타입(서버의 크기)
+            Ncloud image data를 다운 받은 뒤 server_image_product_code, server_product_code를 기입 (**주의 : 서버 이미지에 맞는 서버 타입을 선택해야 됩니다. windows 서버 이미지의 서버 타입과 linux 서버 이미지의 서버 타입은 다릅니다.**)
+            [Ncloud image data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/OnBeJKUea1Q7LbOuZnf2sDBo7ReWJzQXSLKSdIMcLEnqezsch9nu4_0vUBDHXQsE/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Ncloud_images.txt)
+         + zone : region에 맞게 설정해야 됩니다.
+            |  KR  |  HK  |  SGN  |  JPN  |  USWN  |  DEN  |
+            |------|------|-------|-------|--------|-------|
+            | KR-1 | HK-1 | SGN-1 | JPN-1 | USWN-1 | DEN-1 |
+            | KR-2 |      |       |       |        |       |
+         + access_control_group_configuration_no_list : ACG 생성에서 메모해둔 ACG_ID
          + user_data_path :
-            - Enter the path to the txt file in the scripts folder of the downloaded oci_terraform. 
-            - Use the file oci_linux_cloud_init_txt for Linux-like operating systems and the file oci_windows_cloud_init_txt for Windows-like operating systems.
-         + ssh_public_key_path : Linux-like operating systems require the file path of the user's ssh_public key.
-         + ocpus : You must enter the number of CPUs when using Flexible_shape. The range is from 1 to 64.
-         + memory_in_gbs : When using Flexible_shape, you must select memory capacity. The range is from cpu count to 1024.
+            * 다운로드 한 NBP_terraform file의 스크립트 폴더에 **파일 경로를** 기입합니다
+            * Linux 계열 운영 체제의 경우 Linux_cloud_init.sh 파일을 사용하고, Windows 계열 운영 체제의 경우 Windows_cloud_init.vbs 파일을 사용합니다.
+            * user_data의 스크립트는 수정 가능합니다.
+         + login_key : Ncloud 인증키 생성 단계에서 메모한 인증키 이름을 기입합니다.
+
+         + storage_count : 생성을 원하는 Server의 storage 갯수
+         + storage_display_name : 생성을 원하는 Server의 storage 이름
+         + storage_size : 생성을 원하는 Server의 storage 크기
 
       ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUb0M_3gy8hI1CCLZM5cO3q3PLKRyzaoA2GbHs6h4ZRTIO4TJd-lYk61_e1LBboy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
 
