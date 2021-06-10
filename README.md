@@ -5,6 +5,8 @@ NBP Terraform
 >
 > Ncloud AGC 생성
 >
+> Ncloud 인증키 설정
+>
 > Terraform 실행 파일 설치
 >
 > Ncloud Terraform 데이터 생성
@@ -14,6 +16,8 @@ NBP Terraform
 
 
 ## Ncloud 플랫폼 인증키 생성
+
+만약 Access Key ID, Secret Key를 알고 있다면 메모장에 Access Key ID와 Secret Key를 메모 후 이 단계를 뛰어 넘어도 됩니다.
 
 네이버 클라우드 플랫폼 계정은 이미 가지고 있다고 가정 :
 
@@ -33,42 +37,81 @@ NBP Terraform
 
       4. Result
 
-         ![결과](https://objectstorage.ap-seoul-1.oraclecloud.com/p/M-b9GzJwbpZ6Od2fF7Kn1KOxoTZjXd-ESgrsIZYtd0FyvPHpNWESd2Mx-X7ynfwB/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/API%20%ED%82%A4%20%EA%B2%B0%EA%B3%BC.png)
+         ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/M-b9GzJwbpZ6Od2fF7Kn1KOxoTZjXd-ESgrsIZYtd0FyvPHpNWESd2Mx-X7ynfwB/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/API%20%ED%82%A4%20%EA%B2%B0%EA%B3%BC.png)
 
 
 
 ## Ncloud AGC 생성
 
-   * Console로 이동
+만약 이 전에 50000-50005 port를 열었던 AGC가 있다면 AGC ID를 메모 후 이 단계를 뛰어 넘어도 됩니다.
 
-      * ![Console](https://objectstorage.ap-seoul-1.oraclecloud.com/p/U89ci1Qh6lvG2V6SN_ZXfxNIsXunRlzN8h4wIKGkCwUkiuI1pbtgAZC495LW0kEX/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ncloud%20Console.png)
+   1. Console로 이동
 
-   * Dashboard - Server - ACG로 이동
+      ![Console](https://objectstorage.ap-seoul-1.oraclecloud.com/p/U89ci1Qh6lvG2V6SN_ZXfxNIsXunRlzN8h4wIKGkCwUkiuI1pbtgAZC495LW0kEX/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ncloud%20Console.png)
 
-     * ![Dashboard](https://objectstorage.ap-seoul-1.oraclecloud.com/p/rIiwTKEyMh0ne9cFICSvY-1umBhCim-ag2_nNxiDMHFYtaqQiv8WIxe2gd2J-lbw/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Dashboard.png)
+   2. Dashboard - Server - ACG로 이동
 
-   * ACG 생성
+      ![Dashboard](https://objectstorage.ap-seoul-1.oraclecloud.com/p/rIiwTKEyMh0ne9cFICSvY-1umBhCim-ag2_nNxiDMHFYtaqQiv8WIxe2gd2J-lbw/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Dashboard.png)
 
-     * ![Create ACG](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUZQZY-fHcDE-wpyeb7DTTteMQMpbXEQLkL46gmSe56pm9UMwnCsArabeUv-z1Iy/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%83%9D%EC%84%B1.png)
-     * ![Create ACG 2](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JMa_2YA6Ig9C5UzKydh2GvH-_DGLdKnF4cgZK5ba22Ql5pizQRkdkUFOH8ZRVklY/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%83%9D%EC%84%B1%202.png)
+   3. ACG 생성
 
-   * 생성된 파일 선택 후 ACG 설정
+      ![Create ACG](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUZQZY-fHcDE-wpyeb7DTTteMQMpbXEQLkL46gmSe56pm9UMwnCsArabeUv-z1Iy/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%83%9D%EC%84%B1.png)
+      ![Create ACG 2](https://objectstorage.ap-seoul-1.oraclecloud.com/p/JMa_2YA6Ig9C5UzKydh2GvH-_DGLdKnF4cgZK5ba22Ql5pizQRkdkUFOH8ZRVklY/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%83%9D%EC%84%B1%202.png)
 
-      * ![ACG 설정](https://objectstorage.ap-seoul-1.oraclecloud.com/p/GFtBPchY2Arfr3fUYO8MQDZ1QfFh7qQRDY_aAsVxK_BHUFGQwEVDE3kT1yyAOFEC/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%84%A4%EC%A0%95.png)
+   4. 생성된 파일 선택 후 ACG 설정
 
-   * AGC 규칙 설정
+      ![ACG 설정](https://objectstorage.ap-seoul-1.oraclecloud.com/p/GFtBPchY2Arfr3fUYO8MQDZ1QfFh7qQRDY_aAsVxK_BHUFGQwEVDE3kT1yyAOFEC/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EC%84%A4%EC%A0%95.png)
 
-      1. ZCONVERTER 서비스를 사용하기 위해서는 50000-50005 port가 열려 있어야 됩니다.
+   5. AGC 규칙 설정
 
-      * ![AGC 규칙 설정](https://objectstorage.ap-seoul-1.oraclecloud.com/p/QzfUavwD9ZJB0eEs6FpaTNrXvG6PxglbIdBYzxo_58zyG5JSc8pq8HJctf8IqalY/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EA%B7%9C%EC%B9%99%20%EC%84%A4%EC%A0%95.png)
+      * ZCONVERTER 서비스를 사용하기 위해서는 50000-50005 port가 열려 있어야 됩니다.
 
-   *  AGC ID 복사 후 메모장에 저장
+         ![AGC 규칙 설정](https://objectstorage.ap-seoul-1.oraclecloud.com/p/QzfUavwD9ZJB0eEs6FpaTNrXvG6PxglbIdBYzxo_58zyG5JSc8pq8HJctf8IqalY/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20%EA%B7%9C%EC%B9%99%20%EC%84%A4%EC%A0%95.png)
 
-      * ![AGC ID](https://objectstorage.ap-seoul-1.oraclecloud.com/p/nsiPyG26xJHFsmOPqDtYmI0HmjfzXGdl5VyitQXbqeh-paL8GoU-NT56k8NS2KZo/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20ID.png)
+   6. AGC ID 복사 후 메모장에 저장
+
+      ![AGC ID](https://objectstorage.ap-seoul-1.oraclecloud.com/p/nsiPyG26xJHFsmOPqDtYmI0HmjfzXGdl5VyitQXbqeh-paL8GoU-NT56k8NS2KZo/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20ID.png)
    
-   * Result
+   7. Result
 
-      ![결과](https://objectstorage.ap-seoul-1.oraclecloud.com/p/6dXKWD92e6J0tNkLl9xc0Qf0lzg-n4hV0eatk-1YU3lofimrlAumswobSDGUQxwy/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20result.png)
+      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/6dXKWD92e6J0tNkLl9xc0Qf0lzg-n4hV0eatk-1YU3lofimrlAumswobSDGUQxwy/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ACG%20result.png)
+
+
+
+## Ncloud 인증키 설정
+
+만약 Ncloud VM 인증키가 있다면, 인증키 이름만 메모 후 이 단계를 뛰어 넘어도 됩니다.
+
+네이버 VM 생성 인증키가 없을때,
+
+   1. Console로 이동
+
+      ![Console](https://objectstorage.ap-seoul-1.oraclecloud.com/p/U89ci1Qh6lvG2V6SN_ZXfxNIsXunRlzN8h4wIKGkCwUkiuI1pbtgAZC495LW0kEX/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/ncloud%20Console.png)
+
+   2. Dashboard - Server - Server로 이동
+
+      ![Dashboard](https://objectstorage.ap-seoul-1.oraclecloud.com/p/ZbNhVc7U3-ujGt1K_ptx3ZNTU10atQIYn-6GSfwPIBZVltd2Sr_X_SSuZ45pqU_h/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Server-Server.png)
+
+   3. 서버 생성
+   
+      ![Server](https://objectstorage.ap-seoul-1.oraclecloud.com/p/vLsPH7OFzjiKZSBiH8gkAwgVvLYU0gvNqnqxxTkDo4xSGK1oQxLdq7CUiqEWsXe7/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/create-Server.png)
+
+   4. 아무 서버 이미지 선택 - 다음 - 다음
+
+      * 이 단계에서는 서버를 생성하지 않고 인증키만 생성하기 때문에 아무 서버를 선택한 다음, 인증키 생성 화면까지 다음을 눌러주시면 됩니다.
+
+         ![Select Server](https://objectstorage.ap-seoul-1.oraclecloud.com/p/dYR4ITd0fHZc9X6Kgyh1CCkqny4Qis5Ly2Y1WYBzEjlKOGj6V9X-u10UV7JS76EW/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/create-Server2.png)
+         ![Select Server](https://objectstorage.ap-seoul-1.oraclecloud.com/p/f8UWAN5dZqY5QaFC0NtVPOFdKL-535T3c_21aif1QpPajUmFZGWd9KclXXqFXsAy/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/create-Server3.png)
+
+   5. 인증키 설정 - 새로운 인증키 생성
+
+      * 인증키 이름은 복사 후 메모장에 저장, 인증키는 따로 저장합니다.
+
+         ![Create Key](https://objectstorage.ap-seoul-1.oraclecloud.com/p/TxFIS9okc0S4pi-wzIdQ0u-_CWkA6yQ6Pg06esxrBhbxj_LwwVus7t1jIwa4EDFz/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/create-Server4.png)
+   
+   6. result
+
+      ![Result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UkQQdV23cP9IHkD9lfPhF47s7j-6i-YwygsnRjFOhCEvwi4rtxI6iat4W34NaKkA/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/create-Server5.png)
 
 
 
@@ -103,3 +146,101 @@ NBP Terraform
          root@base-linux : ~ # terraform version
          Terraform v0.11.8
          ```
+
+
+
+## Ncloud Terraform 데이터 생성
+   Ncloud 사용하는 **terraform data** 데이터를 다운 받습니다..
+
+   1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/lj3ohc9QtSOmOmAJb6P8iA3KiqXCWFV-xFLUs3_w80TE06Q_bg7r-wS4seyNoDil/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/NBP_terraform.zip)**
+
+   2. **Unzip OCI Terraform data**
+
+      ![Ncloud terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/nm7G6MoiHQmCtLhT8YbSkpRlhUgixwlxRgiQWm9_lP-wa2-QgF2viZLssB0ZF2Sm/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Unzip.png)
+
+
+
+## Terraform 시작
+
+   1. **원하는 서버에 맞게 vars.tfvars 파일을 수정**
+
+      ![vars.tfvars](https://objectstorage.ap-seoul-1.oraclecloud.com/p/Ti1ET7cJke1eJysmdCONyCps49CAsoSfP8jHOrvEZgbb0PKiZdPspIWqUJQy0HSo/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/vars.tfvars.png)
+
+      * vars.tfvars data 정보:
+         + tenancy : Use the tenancy noted in API Key creation.
+         + user : Use the user noted in API Key creation.
+         + key_file : Use the absolute path of private_key downloaded from API Key generation.
+         + fingerprint : Use the fingerprint noted in API Key creation.
+         + region : Use the region noted in API Key creation.
+         + compartment : Tenancy or compartment for that account
+         + shape : 
+            - Flexible Shapes : VM.Standard.E3.Flex, VM.Standard.E4.Flex, VM.Optimized3.Flex, VM.Standard.A1.Flex
+            - Standard Shapes : VM.Standard2.1, VM.Standard2.2, VM.Standard2.4, VM.Standard2.8, VM.Standard2.16, VM.Standard2.24
+         + os :
+         + os_version : 
+            | | Windows2019 | Windows2016 | Windows2012 R2 | Linux8 | Linux7.9 | Linux6.10 | centos8 | centos7 | centos8 | ubuntu20.04 | ubuntu18.04 | ubuntu16.04 |
+            |-|-------------|-------------|----------------|--------|----------|-----------|---------|---------|---------|-------------|-------------|-------------|
+            | OS | Windows | Windows | Windows | Oracle Linux | Oracle Linux | Oracle Linux  | CentOS | CentOS | CentOS | Canonical Ubuntu | Canonical Ubuntu | Canonical Ubuntu |
+            | OS_Version | Server 2019 Standard | Server 2016 Standard | Server 2012 R2 Standard | 8 | 7.9 | 6.10 | 8 | 7 | 6 | 20.04 | 18.04 | 16.04 |
+         + block_volume_count : Number of volumes on server you want to create
+         + block_volume_size : Size of volume on server you want to create
+         + block_volume_diskplay_name : Name of volume on server you want to create
+         + blcok_volume_device_path : Specifies the path to the disk when you add it to the Linux family operating system.
+         + diskplay_name : Name of Server you want to
+         + subet_ocid : Use the account's subnet_ocid.
+         + user_data_path :
+            - Enter the path to the txt file in the scripts folder of the downloaded oci_terraform. 
+            - Use the file oci_linux_cloud_init_txt for Linux-like operating systems and the file oci_windows_cloud_init_txt for Windows-like operating systems.
+         + ssh_public_key_path : Linux-like operating systems require the file path of the user's ssh_public key.
+         + ocpus : You must enter the number of CPUs when using Flexible_shape. The range is from 1 to 64.
+         + memory_in_gbs : When using Flexible_shape, you must select memory capacity. The range is from cpu count to 1024.
+
+      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUb0M_3gy8hI1CCLZM5cO3q3PLKRyzaoA2GbHs6h4ZRTIO4TJd-lYk61_e1LBboy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
+
+   2. **Start CMD**
+
+      ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
+
+   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+
+      ```script
+      terraform.exe -chdir={terraform data file path} init
+      ```
+
+      **Note**
+      * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
+
+      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/PxVvenXLonevJC75fqTtJBehD7AHcSMOaWFoM1OSfUyquxl_uFZ0Z2kjBheE_rz8/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init.png)
+   
+      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5mzjf9AlmTRbUvg2QeSV3RzpqSvDWjqeQVmji9vYBxYqKTeTIrBdqvYySFTweOCC/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init%20result.png)
+
+
+   4. **Creates an execution plan. By default, creating a plan consists of:**
+
+      * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
+      * Comparing the current configuration to the prior state and noting any differences.
+      * Proposing a set of change actions that should, if applied, make the remote objects match the configuration.
+
+      ```script
+      terraform.exe -chdir={terraform data file path} plan -var-file={vars file with user specified name}
+      ```
+
+      **Note**
+      * -var-file : Sets values for potentially many [input variables](https://www.terraform.io/docs/language/values/variables.html) declared in the root module of the configuration, using definitions from a ["tfvars" file](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files). Use this option multiple times to include values from more than one file.
+      * The file name of vars.tfvars can be changed.
+
+      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FvA5NEq3E1wlqv-8HD4SVMjAyXVSWl7Kc8Ot98rs5w3vBgNBIxAp4856DPqTrAiU/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20plan.png)
+
+   5. **Executes the actions proposed in a Terraform plan.**
+
+      ```script
+      terraform.exe -chdir={terraform data file path} apply -var-file={vars file with user specified name} -auto-approve
+      ```
+      **Note**
+      * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
+
+      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/SoxEo0Ow-RjYmndQ6_7Zq03BabF2XEl2TutQCz4WcvWnh0eUIl6T5Shhl-YTyrIy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply.png)
+
+   6. **Result**
+
+      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/tqi-vkce_08TSsvkoZh-VL1lPxiqWAFaeMGwhKI2RiuFJ08G7buB8ePms0kS-mad/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply%20result.png)
