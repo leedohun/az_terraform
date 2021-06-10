@@ -129,7 +129,7 @@ NBP Terraform
 
       * Terraform.exe 파일과 같은 경로에서 Terraform 설치 확인
 
-         ![Terraform_exe 실행](https://objectstorage.ap-seoul-1.oraclecloud.com/p/hm8RVqtYIHaAXaUWDwMoh1IK9r-B3Z4d_PZu7gS_HYs81-bhDZMHumElBzlJrSSn/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform_exe%20%EC%8B%A4%ED%96%89.png)
+         ![Terraform_exe 실행](https://objectstorage.ap-seoul-1.oraclecloud.com/p/sBPr_TVmUalVBtAQ2zqjqRI4BsjVYR9JECDWvo4UpVNa3ZBMD6WCV8U9MqCc3pgh/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform_exe%20%EC%8B%A4%ED%96%89.png)
 
    2. Linux OS에서 Terraform 사용
 
