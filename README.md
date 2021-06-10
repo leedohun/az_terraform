@@ -25,7 +25,7 @@ NBP Terraform
 
       1. 마이페이지 - 인증키 관리
 
-         ![마이페이지](https://objectstorage.ap-seoul-1.oraclecloud.com/p/xpXig7xhgLpVhxTxrfFulQMmFPg8nbU6WWMml4iUBWHlBJz2DFYP3u1OpDDLvrCp/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80.png)
+         ![마이페이지](https://objectstorage.ap-seoul-1.oraclecloud.com/p/PqEI9b5WyXfYw8rOV8KRu6Vmc2uk3wpez6kWMBgY2NyXEzHiw1TELCATXj0R0X9H/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80.png)
 
       2. 계정 관리 (로그인)
 
