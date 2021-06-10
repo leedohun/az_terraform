@@ -188,49 +188,50 @@ NBP Terraform
             * 다운로드 한 NBP_terraform file의 스크립트 폴더에 **파일 경로를** 기입합니다
             * Linux 계열 운영 체제의 경우 Linux_cloud_init.sh 파일을 사용하고, Windows 계열 운영 체제의 경우 Windows_cloud_init.vbs 파일을 사용합니다.
             * user_data의 스크립트는 수정 가능합니다.
+            * **주의 : 경로를 선택할 때는 \ (역슬래쉬)를 2개씩 넣어줍니다. ex. C:\\User\\PC\\Desktop\\NBP_teraform\\~~**
          + login_key : Ncloud 인증키 생성 단계에서 메모한 인증키 이름을 기입합니다.
 
          + storage_count : 생성을 원하는 Server의 storage 갯수
          + storage_display_name : 생성을 원하는 Server의 storage 이름
          + storage_size : 생성을 원하는 Server의 storage 크기
 
-      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/UUb0M_3gy8hI1CCLZM5cO3q3PLKRyzaoA2GbHs6h4ZRTIO4TJd-lYk61_e1LBboy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/vars.tfvars%20result.png)
+      ![vars.tfvars example](https://objectstorage.ap-seoul-1.oraclecloud.com/p/fHtcI_vhHkTJ5zHyQlbdnS-3EniyeobFd8LwqfF_4h3IKsu-mGaB7FLhYiU_Wvvt/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/vars.tfvars2.png)
 
-   2. **Start CMD**
+   2. **명령 프롬프트 실행**
 
       ![cmd](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XzXmdi7e-eQrmxk3S9QpiC62EmqKS7Mui5rav_-8bLONUsFPqIGk24P-FoJmQTu5/n/cnfyb6dq82p9/b/test_bucket/o/start%20cmd.png)
 
-   3. **Go to the file path of Terraform.exe and Initialize the working directory containing the terraform configuration file.**
+   3. **Terraform.exe 경로로 들어간 뒤 Terraform configuration file이 포함된 디렉토리 초기화**
 
       ```script
       terraform.exe -chdir={terraform data file path} init
       ```
 
       **Note**
-      * -chdir : The usual way to run Terraform is to first switch to the directory containing the `.tf` files for your root module (for example, using the `cd` command), so that Terraform will find those files automatically without any extra arguments.
+      * -chdir : Terraform을 실행하는 일반적인 방법은 먼저 .tf루트 모듈에 대한 파일이 포함 된 디렉토리로 전환하여 (예 : cd명령 사용) Terraform이 해당 파일을 자동으로 찾을 수 있도록 하는 것입니다.
 
-      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/PxVvenXLonevJC75fqTtJBehD7AHcSMOaWFoM1OSfUyquxl_uFZ0Z2kjBheE_rz8/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init.png)
+      ![terraform init](https://objectstorage.ap-seoul-1.oraclecloud.com/p/3Up84cXPL-nvTG6EOEnQJ_0VbWVZz1ddijuBeXQGexLeHD4syM7yri8-LLMZBpnb/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform%20init.png)
    
-      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/5mzjf9AlmTRbUvg2QeSV3RzpqSvDWjqeQVmji9vYBxYqKTeTIrBdqvYySFTweOCC/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20init%20result.png)
+      ![terraform init result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/WzWliwHizw7RRVLFuoKlUymc-kZjHBL0W3gswM0LYlpteWTmGDPHTgdKb59H-ZBL/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform%20init%20result.png)
 
 
-   4. **Creates an execution plan. By default, creating a plan consists of:**
+   4. **Terraform이 인프라에 적용하려는 변경 사항을 미리 볼 수있는 실행 계획을 생성합니다. 기본적으로 Terraform이 계획을 생성하면 다음이 수행됩니다.**
 
-      * Reading the current state of any already-existing remote objects to make sure that the Terraform state is up-to-date.
-      * Comparing the current configuration to the prior state and noting any differences.
-      * Proposing a set of change actions that should, if applied, make the remote objects match the configuration.
+      * 이미 존재하는 원격 개체의 현재 상태를 읽고 Terraform 상태가 최신 상태인지 확인합니다.
+      * 현재 구성을 이전 상태와 비교하고 차이점을 확인합니다.
+      * 적용된 경우 원격 개체가 구성과 일치하도록해야하는 일련의 변경 작업을 제안합니다.
 
       ```script
       terraform.exe -chdir={terraform data file path} plan -var-file={vars file with user specified name}
       ```
 
       **Note**
-      * -var-file : Sets values for potentially many [input variables](https://www.terraform.io/docs/language/values/variables.html) declared in the root module of the configuration, using definitions from a ["tfvars" file](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files). Use this option multiple times to include values from more than one file.
-      * The file name of vars.tfvars can be changed.
+      * -var-file : ["tfvars"파일의 정의](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files)를 사용하여 구성의 루트 모듈에 선언 된 잠재적으로 많은 [입력 변수에](https://www.terraform.io/docs/language/values/variables.html) 대한 값을 설정 [합니다](https://www.terraform.io/docs/language/values/variables.html#variable-definitions-tfvars-files).
+      * 이 파일의 이름은 변경하여 사용가능 합니다..
 
-      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/FvA5NEq3E1wlqv-8HD4SVMjAyXVSWl7Kc8Ot98rs5w3vBgNBIxAp4856DPqTrAiU/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20plan.png)
+      ![terraform plan](https://objectstorage.ap-seoul-1.oraclecloud.com/p/p383W1M_QfNLOrVgWF4mE00YvY1ZAK4Zas5GeOZ_KuboIFIwZ01ZwBY-6CKtmEtI/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform%20plan.png)
 
-   5. **Executes the actions proposed in a Terraform plan.**
+   5. **Terraform 계획에 제안 된 작업을 실행합니다.**
 
       ```script
       terraform.exe -chdir={terraform data file path} apply -var-file={vars file with user specified name} -auto-approve
@@ -238,8 +239,8 @@ NBP Terraform
       **Note**
       * -auto-approve : Skips interactive approval of plan before applying. This option is ignored when you pass a previously-saved plan file, because Terraform considers you passing the plan file as the approval and so will never prompt in that case.
 
-      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/SoxEo0Ow-RjYmndQ6_7Zq03BabF2XEl2TutQCz4WcvWnh0eUIl6T5Shhl-YTyrIy/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply.png)
+      ![terraform apply](https://objectstorage.ap-seoul-1.oraclecloud.com/p/7uWVQkDg5FtJyPkYpYtWFZ8FtFNOpoiB0K_D9MXBPmGLnpodShI_lREPehOaJGPW/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform%20apply.png)
 
    6. **Result**
 
-      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/tqi-vkce_08TSsvkoZh-VL1lPxiqWAFaeMGwhKI2RiuFJ08G7buB8ePms0kS-mad/n/cnfyb6dq82p9/b/OCI_Terraform_reference/o/terraform%20apply%20result.png)
+      ![terraform apply result](https://objectstorage.ap-seoul-1.oraclecloud.com/p/XNDqDWRH-bJEsQndFC0EOvOwrcAwWuHzwk-BrILgVRKL7ohIhnsRLjrbe51KPK4O/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/terraform%20apply%20result.png)
