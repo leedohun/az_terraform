@@ -177,7 +177,8 @@ Ncloud Terraform
          + server_image_product_code : 서버 이미지
          + server_product_code : 서버 타입(서버의 크기)
             Ncloud image data를 다운 받은 뒤 server_image_product_code, server_product_code를 기입 (**주의 : 서버 이미지에 맞는 서버 타입을 선택해야 됩니다. windows 서버 이미지의 서버 타입과 linux 서버 이미지의 서버 타입은 다릅니다.**)
-            [Ncloud image data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/OnBeJKUea1Q7LbOuZnf2sDBo7ReWJzQXSLKSdIMcLEnqezsch9nu4_0vUBDHXQsE/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Ncloud_images.txt)
+            [Ncloud image data 1](https://objectstorage.ap-seoul-1.oraclecloud.com/p/OnBeJKUea1Q7LbOuZnf2sDBo7ReWJzQXSLKSdIMcLEnqezsch9nu4_0vUBDHXQsE/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/Ncloud_images.txt)
+            [Ncloud image data 2](https://objectstorage.ap-seoul-1.oraclecloud.com/p/15hvaUrP4v1pEGuuoTo_0ZAsT6sp-qIrjgDebo6B7To0lwsHh0b4fZoscBFvusRO/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/NCLOUD_IMAGE.txt)
          + zone : region에 맞게 설정해야 됩니다.
             |  KR  |  HK  |  SGN  |  JPN  |  USWN  |  DEN  |
             |------|------|-------|-------|--------|-------|
