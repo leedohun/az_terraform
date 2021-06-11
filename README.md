@@ -1,4 +1,4 @@
-NBP Terraform
+Ncloud Terraform
 ============
 
 > Ncloud 플랫폼 인증키 생성
@@ -82,7 +82,7 @@ NBP Terraform
 
 만약 Ncloud VM 인증키가 있다면, 인증키 이름만 메모 후 이 단계를 뛰어 넘어도 됩니다.
 
-네이버 VM 생성 인증키가 없을때,
+네이버 [VM 생성 인증키가 없을때](https://www.ncloud.com/guideCenter/guide/1),
 
    1. Console로 이동
 
@@ -152,7 +152,7 @@ NBP Terraform
 ## Ncloud Terraform 데이터 생성
    Ncloud 사용하는 **terraform data** 데이터를 다운 받습니다..
 
-   1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/lj3ohc9QtSOmOmAJb6P8iA3KiqXCWFV-xFLUs3_w80TE06Q_bg7r-wS4seyNoDil/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/NBP_terraform.zip)**
+   1. **Download [Terraform data](https://objectstorage.ap-seoul-1.oraclecloud.com/p/T1KjlDXIcedXa59nAo3Jjx5lEjwE39a76qlCWfm9Z9OcNnOcDCIyvX0qlIVIBGXv/n/cnfyb6dq82p9/b/NBP_Terraform_reference/o/NBP_terraform.zip)**
 
    2. **Unzip OCI Terraform data**
 
